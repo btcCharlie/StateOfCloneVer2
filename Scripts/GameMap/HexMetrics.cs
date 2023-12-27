@@ -10,6 +10,13 @@ namespace StateOfClone.GameMap
         private static float _innerToOuter = 0.866025404f;
         private static float _outerToInner = 1.154700538f;
 
-
+        public static float HexSize
+        {
+            get { return 1f; }
+        }
+        public static float HexSizeInner
+        {
+            get { return HexSize * _outerToInner; }
+        }
     }
 }
