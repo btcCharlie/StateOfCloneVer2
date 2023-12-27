@@ -6,20 +6,16 @@ namespace StateOfClone
 {
     public class HexCell
     {
-        private float _size;
         private Vector3 _position;
         public HexCoordinates Coordinates { get; private set; }
+        public int Height { get; private set; }
 
-        public HexCell(float size, HexCoordinates coordinates, Vector3 position)
+        public HexCell(HexCoordinates coordinates, Vector3 position, int height)
         {
-            _size = size;
-            _position = position;
             Coordinates = coordinates;
+            _position = position;
+            Height = height;
         }
 
-        public void GenerateGeometry()
-        {
-
-        }
     }
 }

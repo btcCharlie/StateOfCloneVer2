@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://ckpgggdemk2gq"]
+[gd_scene load_steps=2 format=3 uid="uid://ckpgggdemk2gq"]
+
+[ext_resource type="Script" path="res://GameMap/Scripts/HexMesh.cs" id="1_621jg"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="HexGrid" type="Node3D" parent="."]
+
+[node name="GridChunk" type="Node3D" parent="HexGrid"]
+
+[node name="HexCell" type="Node3D" parent="HexGrid/GridChunk"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HexGrid/GridChunk"]
+script = ExtResource("1_621jg")

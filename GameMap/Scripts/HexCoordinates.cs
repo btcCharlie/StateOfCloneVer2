@@ -30,5 +30,14 @@ namespace StateOfClone
             X = x;
             Y = y;
         }
+
+        public static HexCoordinates FromGridPosition(int x, int y)
+        {
+            if (x < 0 || y < 0)
+            {
+                throw new ArgumentException("x and y must not be less than 0!");
+            }
+            return new HexCoordinates(x - y / 2, y);
+        }
     }
 }

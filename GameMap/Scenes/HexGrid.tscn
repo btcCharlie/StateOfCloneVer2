@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce47810kmoy2b"]
+
+[ext_resource type="PackedScene" uid="uid://ddhdg6bfcb7wk" path="res://GameMap/Scenes/HexGridChunk.tscn" id="1_pp21v"]
+
+[node name="HexGrid" type="Node3D"]
+
+[node name="GridChunk" parent="." instance=ExtResource("1_pp21v")]
